@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/_example.scss"],"names":[],"mappings":"AACA,SACE,eAAA,CACA,YAAA,CACA,uBAGF,QACE","file":"src.bd1ad4a3.css","sourceRoot":"../src","sourcesContent":["\n.wrapper{\n  margin-top: 50px;\n  display: flex;\n  justify-content: center;\n}\n\n.my-btn {\n  margin-right: 10px;\n}"]}
