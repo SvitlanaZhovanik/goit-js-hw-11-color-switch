@@ -3,6 +3,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"tree":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e=["#FFFFFF","#2196F3","#4CAF50","#FF9800","#009688","#795548"];var t=e;exports.default=t;
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");var e=r(require("./color.js"));function r(e){return e&&e.__esModule?e:{default:e}}const t=document.querySelector("#start"),o=document.querySelector("#stop"),s=(e,r)=>Math.floor(Math.random()*(r-e+1)+e);
+"use strict";require("./sass/main.scss");var e=t(require("./color.js"));function t(e){return e&&e.__esModule?e:{default:e}}const r=document.querySelector("#start"),n=document.querySelector("#stop"),o=document.querySelector("body");let l=!1,c=null;const u=(e,t)=>Math.floor(Math.random()*(t-e+1)+e),s=function(){l||(c=setInterval(()=>{l=!0;let t=u(0,e.default.length);a(e.default[t])},2e3))};function a(e){o.style.backgroundColor=e}r.addEventListener("click",s),n.addEventListener("click",()=>{clearInterval(c),l=!1});
 },{"./sass/main.scss":"clu1","./color.js":"tree"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-color-switch/src.2140bb58.js.map
+//# sourceMappingURL=/goit-js-hw-11-color-switch/src.31aae475.js.map
