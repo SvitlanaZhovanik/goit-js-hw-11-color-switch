@@ -19,7 +19,7 @@ const randomIntegerFromInterval = (min, max) => {
    }
   switchId = setInterval(()=>{
     isActive = true;
-    let idx = randomIntegerFromInterval(0, colors.length)
+    let idx = randomIntegerFromInterval(0, (colors.length-1))
     setBodyBgColor (colors[idx])
   }, 2000)
   };
