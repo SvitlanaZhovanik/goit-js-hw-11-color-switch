@@ -5,7 +5,6 @@ import colors from './color.js'
 const btnStartRef = document.querySelector('#start');
 const btnStopRef = document.querySelector('#stop');
 const bodyRef = document.querySelector('body');
-let isActive = false;
 let switchId = null;
 
 const randomIntegerFromInterval = (min, max) => {
@@ -14,12 +13,10 @@ const randomIntegerFromInterval = (min, max) => {
 
 
   const onBtnStartClick = function (){
-   if (isActive) {
-     return
-   }
-  switchId = setInterval(()=>{
-    isActive = true;
-    let idx = randomIntegerFromInterval(0, (colors.length-1))
+    btnStartRef.disabled = true;
+    btnStopRef.disabled = false;
+    switchId = setInterval(()=>{
+    let idx = randomIntegerFromInterval(0, colors.length-1)
     setBodyBgColor (colors[idx])
   }, 2000)
   };
@@ -32,7 +29,8 @@ const randomIntegerFromInterval = (min, max) => {
   btnStartRef.addEventListener('click', onBtnStartClick)
   btnStopRef.addEventListener('click', () => {
     clearInterval(switchId);
-    isActive = false;
+    btnStartRef.disabled = false;
+    btnStopRef.disabled = true;
   });
 
   
